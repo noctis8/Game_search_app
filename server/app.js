@@ -19,7 +19,6 @@ const apiKey = process.env.API_KEY
 
 
 app.get('/api/v1/game', async (req, res) => {
-    console.log(req.query)
     const searchTerm = req.query.search;
     console.log(`from server: ${searchTerm}`);
     const apiUrl = `https://api.rawg.io/api/games?search=${searchTerm}&key=${apiKey}`

@@ -6,7 +6,6 @@ async function fetchGameList(apiUrl) {
             throw new Error(`HTTP error!, status: ${response.status}`)
         }
         let data = await response.json()
-        console.log('Data fetched successfully:', data)
         return data
     } catch (error) {
         console.error('Error fetching data:', error)
