@@ -2,6 +2,8 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --border-rad: 8px;
+  --border-cl: #888;
 
   color-scheme: light dark;
   font-synthesis: none;
@@ -14,11 +16,34 @@ body {
   margin: 0;
   padding: 0;
   place-items: center;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #000;
     background-color: #ffffff;
+  }
+}
+
+.container {
+  padding-left: .75rem;
+  padding-right: .75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+      width: 730px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+      width: 950px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
   }
 }

@@ -1,7 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import cors from 'cors';
-import fetchGameList from "./fetch-data.js"
+import tryCatch from './try-catch-api-utils.js';
 
 
 const app = express()
@@ -20,10 +20,14 @@ const apiKey = process.env.API_KEY
 
 app.get('/api/v1/game', async (req, res) => {
     const searchTerm = req.query.search;
-    console.log(`from server: ${searchTerm}`);
     const apiUrl = `https://api.rawg.io/api/games?search=${searchTerm}&key=${apiKey}`
-    let data = await fetchGameList(apiUrl);
-    res.status(200).json(data)
+    await tryCatch(apiUrl, res)
+})
+
+app.get('/api/v1/game/:id', async (req, res) => {
+    const searchTerm = req.params.id;
+    const apiUrl = `https://api.rawg.io/api/games/${searchTerm}?key=${apiKey}`
+    await tryCatch(apiUrl, res)
 })
 
 

@@ -1,0 +1,110 @@
+.description-container {
+    width: 70vw;
+    margin: auto;
+}
+
+.description-container button {
+    margin-bottom: 1rem;
+}
+
+.description-container button svg {
+    margin-right: 0.5rem;
+}
+
+.image-conatiner {
+    margin-block: 1.5rem 3rem;
+    height: 180px;
+    position: relative;
+}
+
+.image-conatiner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-rad);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.image-conatiner h2 {
+    text-shadow: 2px 2px 2px black;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+.description {
+    margin: 2rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.screenshots {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.screenshots img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+    .image-conatiner h2 {
+        font-size: 1.25rem;
+    }
+    .description {
+        font-size: .75rem;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: start;
+    }
+    .data {
+        gap: 0;
+    }
+}
+
+.genres-container, .platforms-conatiner {
+    flex: 1;
+}
+
+.genres-container p,
+.platforms-conatiner p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.platform {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    margin: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.purchase {
+    text-align: right;
+    margin-top: 2rem;
+}
